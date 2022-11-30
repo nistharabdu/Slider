@@ -7,6 +7,7 @@ var sliderDots = document.querySelector('.slider-dots');
 var index = 1;
 sliderContainer.dataset.index = index;
 
+//left arrow
 rightNav.addEventListener('click', function(){
     if(index < sliderLength){
         sliderContainer.style.transform = 'translateX(-'+ (index)*100 +'%)';
@@ -22,6 +23,7 @@ rightNav.addEventListener('click', function(){
     
 });
 
+//Right arrow
 leftNav.addEventListener('click', function(){
     if(index <= 1 ){
         sliderContainer.style.transform = 'translateX(0%)';
@@ -46,6 +48,7 @@ for (i=0; i < sliderLength; i++){
     sliderDots.append(divDots);
 }
 
+// Dots click event
 var sliderDotAll = document.querySelectorAll('.slider-dots__each');
 sliderDotAll.forEach(function(ele,ind){
     ele.addEventListener('click',function(){
@@ -57,6 +60,7 @@ sliderDotAll.forEach(function(ele,ind){
     })
 })
 
+// setting up the active dot
 function setActiveDots(index){
     var sliderDotAll = document.querySelectorAll('.slider-dots__each');
     sliderDotAll.forEach(function(eachEle,eachIndex){
